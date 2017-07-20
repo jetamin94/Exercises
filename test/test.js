@@ -5,7 +5,7 @@ const should = chai.should()
 
 describe('Test part3', () => {
 	it('4.1 Remove invalid data', () => {
-		let res = server.removeInvalid([NaN, 0, 16, false, -21, '', undefined, 45, null])
+		let res = server.removeInvalid([0, 16, false, -21, '', undefined, 45, null])
 		res.should.be.an('array')
 		res.should.have.members([16, -21, 45])
 	})
@@ -16,10 +16,10 @@ describe('Test part3', () => {
 	})
 	it('4.3 Get a random item from an array', () => {
 		let res = server.getRandom([1, 2, 3, 4, 5])
-		res.should.be.an('array')
+		res.should.not.be.null;
 	})
 	it('4.4 Use reduce() to sum all scores', () => {
-		let res = serve.sumScores([
+		let res = server.sumScores([
 			{
 				id: 1,
 				scores: [7, 8, 3, 4]
