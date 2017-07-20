@@ -161,7 +161,9 @@
 
 // 4.1
 const removeInvalid = (arr) => {
+    res = []
 
+    return res
 }
 
 // 4.2

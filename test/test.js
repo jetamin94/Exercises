@@ -15,7 +15,7 @@ describe('Test part3', () => {
 		res.should.have.members([2, 9, 6])
 	})
 	it('4.3 Get a random item from an array', () => {
-		let res = serve.getRandom([1, 2, 3, 4, 5])
+		let res = server.getRandom([1, 2, 3, 4, 5])
 		res.should.be.an('array')
 	})
 	it('4.4 Use reduce() to sum all scores', () => {
@@ -36,7 +36,7 @@ describe('Test part3', () => {
 		res.should.be.an('array')
 	})
 	it('4.5 Increase all elements by 10', () => {
-		let res = serve.inscrease10([5, 10, 15, 20, 25, 30])
+		let res = server.inscrease10([5, 10, 15, 20, 25, 30])
 		res.should.be.an('array')
 		res.should.have.members([15, 20, 25, 30, 35, 40])
 	})
